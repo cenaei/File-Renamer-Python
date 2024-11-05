@@ -1,87 +1,84 @@
-File Renamer Script
+# File Renamer Script
 
-Welcome! This simple Python script will help you batch rename files by
-removing unwanted prefixes from file names. It’s particularly useful for
-cleaning up file names downloaded with common prefixes like
-\[SPOTDOWNLOADER.COM\].
+*Welcome! This simple Python script will help you batch rename files by removing unwanted prefixes from file names. It’s particularly useful for cleaning up file names downloaded with common prefixes like [SPOTDOWNLOADER.COM].
+*
+### Features
 
-Features
+	•	Renames files by removing the specified prefix.
+	•	Easy to customize if you want to change the prefix or use a different folder.
 
-• Renames files by removing the specified prefix. • Easy to customize if
-you want to change the prefix or use a different folder.
+### Prerequisites
 
-Prerequisites
+	•	Python 3: Make sure Python 3 is installed on your system.
 
-• Python 3: Make sure Python 3 is installed on your system.
+### Getting Started
 
-Getting Started
+	1.	Clone or download this repository: Download the script to your preferred location.
+	2.	Place files in the target folder: Ensure the files you want to rename are located in a single folder.
 
- 1. Clone or download this repository: Download the script to your
-preferred location. 2. Place files in the target folder: Ensure the
-files you want to rename are located in a single folder.
+### Usage
 
-Usage
+	1.	Open the script: Open file_renamer.py (or whatever name you choose for this file) in a code editor.
+	2.	Set the directory path:
+	•	Locate the following line:
 
- 1. Open the script: Open file_renamer.py (or whatever name you choose
-for this file) in a code editor. 2. Set the directory path: • Locate the
-following line:
+`directory = "/path/to/your/files"`
 
-directory = "/path/to/your/files"
 
-• Replace "/path/to/your/files" with the path to your folder that
-contains the files to rename. Note: Use absolute paths for best results.
+	•	Replace "/path/to/your/files" with the path to your folder that contains the files to rename. Note: Use absolute paths for best results.
 
-3. Run the script: • In the terminal, navigate to the directory where
-the script is saved and execute:
+	3.	Run the script:
+	•	In the terminal, navigate to the directory where the script is saved and execute:
 
-python file_renamer.py
+`python file_renamer.py`
 
-• The script will scan for files that start with the prefix
-"\[SPOTDOWNLOADER.COM\] " and rename them by removing the prefix.
 
-4. Check the Output: • Each renamed file will be printed to the console
-as confirmation, e.g.,:
+	•	The script will scan for files that start with the prefix "[SPOTDOWNLOADER.COM] " and rename them by removing the prefix.
 
-Renamed: "\[SPOTDOWNLOADER.COM\] a thousand years.mp3" to "a thousand
-years.mp3"
+	4.	Check the Output:
+	•	Each renamed file will be printed to the console as confirmation, e.g.,:
 
-Customization
+`Renamed: "[SPOTDOWNLOADER.COM] a thousand years.mp3" to "a thousand years.mp3"`
 
-1\. Changing the Prefix
 
-• If you want to remove a different prefix (for example,
-\[DOWNLOADSITE.COM\]), update this line:
 
-if filename.startswith("\[SPOTDOWNLOADER.COM\] "):
+### Customization
 
-• Replace "\[SPOTDOWNLOADER.COM\] " with the new prefix you wish to
-remove.
+1. Changing the Prefix
 
-2\. Changing the Directory Path
+	•	If you want to remove a different prefix (for example, [DOWNLOADSITE.COM]), update this line:
 
-• Modify the directory variable to point to a different folder if you
-want to rename files in another location:
+`if filename.startswith("[SPOTDOWNLOADER.COM] "):`
 
-directory = "/new/path/to/your/files"
+	•	Replace "[SPOTDOWNLOADER.COM] " with the new prefix you wish to remove.
 
-Additional Notes
+2. Changing the Directory Path
 
-• Error Handling: The script currently assumes that all files in the
-directory may have the prefix. If there are files without the prefix,
-they’ll be ignored. • Undoing Changes: The script doesn’t keep a backup,
-so be sure you want these changes before running it. For safety, test
-with a few sample files if needed.
+	•	Modify the directory variable to point to a different folder if you want to rename files in another location:
 
-Example Output
+`directory = "/new/path/to/your/files"`
+
+
+
+## Additional Notes
+
+	•	Error Handling: The script currently assumes that all files in the directory may have the prefix. If there are files without the prefix, they’ll be ignored.
+	•	Undoing Changes: The script doesn’t keep a backup, so be sure you want these changes before running it. For safety, test with a few sample files if needed.
+
+### Example Output
 
 Running this script with files like:
 
-\[SPOTDOWNLOADER.COM\] a thousand years.mp3 \[SPOTDOWNLOADER.COM\]
-beautiful day.mp3
+```
+[SPOTDOWNLOADER.COM] a thousand years.mp3
+[SPOTDOWNLOADER.COM] beautiful day.mp3
+```
 
 Results in:
 
-a thousand years.mp3 beautiful day.mp3
+```
+a thousand years.mp3
+beautiful day.mp3
+```
 
-Feel free to reach out with any questions or suggestions for
-improvement. Happy renaming!
+> Feel free to reach out with any questions or suggestions for improvement. Happy renaming!Feel free to reach out with any questions or suggestions for improvement. Happy renaming!
